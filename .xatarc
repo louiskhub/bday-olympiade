@@ -1,0 +1,8 @@
+{
+  "databaseURL": "https://kapplouis-s-workspace-tnvj9h.eu-central-1.xata.sh/db/olympiade",
+  "codegen": {
+    "output": "src/lib/db/xata.js",
+    "moduleType": "esm",
+    "declarations": true
+  }
+}

@@ -1,6 +1,6 @@
-import { env } from '$env/dynamic/private';
+import { getXataClientOnce } from '$lib/db/clients';
 
 /** @type {import('./$types').LayoutServerLoad} */
-export function load() {
-	return { analyticsId: env.VERCEL_ANALYTICS_ID };
+export async function load({ locals }) {
+	return { player: locals.player, teammate: locals.teammate };
 }

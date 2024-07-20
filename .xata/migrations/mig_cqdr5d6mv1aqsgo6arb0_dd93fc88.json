@@ -1,0 +1,137 @@
+{
+  "id": "mig_cqdr5d6mv1aqsgo6arb0",
+  "checksum": "1:dd93fc882a5778f815341d31db1562cfaae39b4b72d8fb550a3ef0f1475b37dd",
+  "operations": [
+    {
+      "addTable": {
+        "table": "Players"
+      }
+    },
+    {
+      "addTable": {
+        "table": "Teams"
+      }
+    },
+    {
+      "addTable": {
+        "table": "Team_Games"
+      }
+    },
+    {
+      "addTable": {
+        "table": "TeamGames"
+      }
+    },
+    {
+      "addTable": {
+        "table": "IndividualGames"
+      }
+    },
+    {
+      "addTable": {
+        "table": "Individual_Games"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "name",
+          "type": "string",
+          "unique": true
+        },
+        "table": "Players"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "player1",
+          "type": "link",
+          "link": {
+            "table": "Players"
+          },
+          "unique": true
+        },
+        "table": "Teams"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "player2",
+          "type": "link",
+          "link": {
+            "table": "Players"
+          },
+          "unique": true
+        },
+        "table": "Teams"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "team",
+          "type": "link",
+          "link": {
+            "table": "Teams"
+          }
+        },
+        "table": "Team_Games"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "game",
+          "type": "link",
+          "link": {
+            "table": "TeamGames"
+          }
+        },
+        "table": "Team_Games"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "wins",
+          "type": "int",
+          "notNull": true,
+          "defaultValue": "0"
+        },
+        "table": "Team_Games"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "player",
+          "type": "string"
+        },
+        "table": "Individual_Games"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "game",
+          "type": "link",
+          "link": {
+            "table": "IndividualGames"
+          }
+        },
+        "table": "Individual_Games"
+      }
+    },
+    {
+      "addColumn": {
+        "column": {
+          "name": "time",
+          "type": "float"
+        },
+        "table": "Individual_Games"
+      }
+    }
+  ]
+}
